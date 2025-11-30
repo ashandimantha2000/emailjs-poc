@@ -1,16 +1,90 @@
-# React + Vite
+# 📩 React Contact Form with EmailJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and secure contact form in React that sends emails **without
+any backend API**, using **EmailJS**.
 
-Currently, two official plugins are available:
+This project uses:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **React + Vite**
+-   **EmailJS (`sendForm`)**
+-   **Environment variables (`.env`)**
+-   **HTML-based EmailJS Template**
 
-## React Compiler
+------------------------------------------------------------------------
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⭐ Features
 
-## Expanding the ESLint configuration
+✔ No backend required\
+✔ Sends email directly from the browser\
+✔ Uses secure EmailJS public keys\
+✔ Works with HTML email templates\
+✔ Very easy to customize
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+------------------------------------------------------------------------
+
+## 📁 Project Structure
+
+    src/
+     ├── components/
+     │    └── ContactForm.jsx
+     ├── App.jsx
+     └── main.jsx
+    .env
+
+------------------------------------------------------------------------
+
+## 🔧 Installation
+
+``` sh
+npm install @emailjs/browser
+```
+
+------------------------------------------------------------------------
+
+## 🔑 Setup EmailJS
+
+### 1. Create a free EmailJS account
+
+👉 https://www.emailjs.com/
+
+### 2. Create:
+
+-   **Email Service**
+-   **Email Template**
+-   **Public Key**
+
+### 3. Add these variables in `.env` (Vite uses `VITE_` prefix)
+
+    VITE_EMAILJS_PUBLIC_KEY=UhPZS7jbEpQt3tco4
+    VITE_EMAILJS_SERVICE_ID=service_f6n7enk
+    VITE_EMAILJS_TEMPLATE_ID=template_bk787ap
+
+> Restart your development server after editing `.env`.
+
+------------------------------------------------------------------------
+
+## ▶️ Run the app
+
+``` sh
+npm run dev
+```
+
+------------------------------------------------------------------------
+
+## ❗ Troubleshooting
+
+### **400 --- The template ID not found**
+
+-   Template ID is wrong\
+-   Template variables do not match your form\
+-   Missing `.env` variables
+
+### **Grammarly "Iterable" error**
+
+This comes from the Grammarly extension → **ignore it**.
+
+------------------------------------------------------------------------
+
+## ✅ Done!
+
+Your React app can now send emails **with no backend**, using EmailJS.
