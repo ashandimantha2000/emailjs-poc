@@ -1,4 +1,4 @@
-# 📩 React Contact Form with EmailJS
+# 📩 React Contact Form with EmailJS (v1)
 
 A simple and secure contact form in React that sends emails **without
 any backend API**, using **EmailJS**.
